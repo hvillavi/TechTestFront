@@ -1,0 +1,15 @@
+<h2>Login</h2>
+<div>
+  <label>Usuario:</label>
+  <input type="text" [(ngModel)]="usuario">
+</div>
+<div>
+  <label>Contraseña:</label>
+  <input type="password" [(ngModel)]="contrasena">
+</div>
+<button (click)="iniciarSesion()">Iniciar sesión</button>
+
+<!-- Mostrar mensaje de error -->
+<div *ngIf="errorMensaje" class="error-message">
+    {{ errorMensaje }}
+</div>

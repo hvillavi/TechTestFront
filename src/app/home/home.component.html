@@ -1,0 +1,21 @@
+<h2>Home</h2>
+<div>
+  <label>Lat:</label>
+  <input type="text" [(ngModel)]="lat">
+</div>
+<div>
+  <label>Lng:</label>
+  <input type="text" [(ngModel)]="lng">
+</div>
+<button (click)="consultar()">Consultar</button>
+<div *ngIf="datos">
+  <p>Latitud de entrada: {{ datos.lat_input }}</p>
+  <p>Longitud de entrada: {{ datos.lng_input }}</p>
+  <p>Campo 1: {{ datos.datos.campo1 }}</p>
+  <p>Campo 2: {{ datos.datos.campo2 }}</p>
+</div>
+
+<!-- Mostrar mensaje de error -->
+<div *ngIf="errorMensaje" class="error-message">
+  {{ errorMensaje }}
+</div>
